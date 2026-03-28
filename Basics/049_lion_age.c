@@ -15,6 +15,5 @@ int main() {
         printf("Old Adult");
     else
         printf("Invalid Age");
-
     return 0;
 }
