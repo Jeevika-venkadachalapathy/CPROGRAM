@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main() {
+    int day, month, year;
+    printf("Enter date (DD MM YYYY): ");
+    scanf("%d %d %d", &day, &month, &year);
+    if (month < 1 || month > 12 || day < 1 || day > 31) {
+        printf("Invalid date");
+        return 0;
+    }
+    if ((month == 3 && day >= 1) || (month > 3 && month < 6) || (month == 5 && day <= 31))
+        printf("Season: Spring\n");
+    else if ((month == 6) || (month > 6 && month < 9) || (month == 8))
+        printf("Season: Summer\n");
+    else if ((month == 9) || (month > 9 && month < 12) || (month == 11))
+        printf("Season: Autumn\n");
+    else
+        printf("Season: Winter\n");
+    printf("Days in Quarter: %d", day);
+    return 0;
+}
