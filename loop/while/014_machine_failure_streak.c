@@ -15,7 +15,6 @@ int main(){
         else{
             count = 0;
         }
-
         i++;
     }
     printf("Longest Failure Streak: %d", Longest_Streak);
