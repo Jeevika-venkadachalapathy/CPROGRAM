@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int max_weight,passenger_count,passenger_weight;
+    int i=0,weight=0,count=0;
+    char overload[10];
+    scanf("%d",&max_weight);
+    scanf("%d",&passenger_count);
+    while(i<passenger_count){
+        scanf("%d",&passenger_weight);
+        weight=weight+passenger_weight;
+        if(weight>max_weight){
+            strcpy(overload,"Yes");
+            break;
+        }
+        count++;
+        i++;
+    }
+    if(weight<=max_weight)
+    strcpy(overload,"No");
+    printf("Passengers Allowed: %d\n",count);
+    printf("Overload: %s\n",overload);
+}
